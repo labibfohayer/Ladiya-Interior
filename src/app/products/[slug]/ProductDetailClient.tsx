@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -27,9 +27,11 @@ import { ProductCard } from '@/components/ProductCard';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-export default function ProductDetailClient({ slug }: { slug: string }) {
+export default function ProductDetailPage({ slug: propSlug }: { slug?: string }) {
+  const params = useParams();
   const searchParams = useSearchParams();
-  const initialLayout = searchParams ? searchParams.get('layout') || 'classic' : 'classic';
+  const slug = (propSlug || params?.slug) as string;
+  const initialLayout = searchParams.get('layout') || 'classic';
 
   const [activeLayout, setActiveLayout] = useState<string>(initialLayout);
   const product = PRODUCTS.find(p => p.slug === slug) || PRODUCTS[0];

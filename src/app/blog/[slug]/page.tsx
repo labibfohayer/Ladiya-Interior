@@ -7,14 +7,16 @@ import { Footer } from '@/components/Footer';
 
 export function generateStaticParams() {
   return [
-    { slug: 'spatial-minimalism-raw-materials' },
-    { slug: 'sustainable-tectonic-materials' },
+    { slug: 'philosophy-of-spatial-minimalism' },
+    { slug: 'sustainable-tectonic-materials-stone-oak' },
     { slug: 'circadian-lighting-spatial-acoustics' },
-    { slug: 'art-of-custom-millwork' }
+    { slug: 'art-of-custom-millwork-concealed-joinery' },
+    { slug: 'spatial-minimalism-raw-materials' }
   ];
 }
 
-export default function SingleBlogPage() {
+export default async function SingleBlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
   return (
     <div className="bg-[#ffffff] min-h-screen">

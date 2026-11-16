@@ -9,7 +9,7 @@ import { PRODUCTS, CATEGORIES } from '@/data/products';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-export default function CollectionClient() {
+export default function CollectionPage({ slug }: { slug?: string }) {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || 'All';
   const initialFilter = searchParams.get('filter') || 'all';

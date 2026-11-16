@@ -1,21 +1,20 @@
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import CollectionClient from './CollectionClient';
+import { CATEGORIES } from '@/data/products';
 
 export function generateStaticParams() {
   return [
     { slug: 'all' },
-    { slug: 'living-architecture' },
-    { slug: 'spatial-lighting' },
-    { slug: 'dining-millwork' },
-    { slug: 'acoustic-surfaces' },
-    { slug: 'penthouse-suites' }
+    ...CATEGORIES.map(c => ({ slug: c.id }))
   ];
 }
 
-export default function CollectionPage() {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
   return (
     <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <CollectionClient />
+      <CollectionClient slug={slug} />
     </Suspense>
   );
 }
