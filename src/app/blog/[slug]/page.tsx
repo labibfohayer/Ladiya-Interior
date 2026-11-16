@@ -1,16 +1,20 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { ChevronRight, Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
+export function generateStaticParams() {
+  return [
+    { slug: 'spatial-minimalism-raw-materials' },
+    { slug: 'sustainable-tectonic-materials' },
+    { slug: 'circadian-lighting-spatial-acoustics' },
+    { slug: 'art-of-custom-millwork' }
+  ];
+}
+
 export default function SingleBlogPage() {
-  const params = useParams();
-  const slug = params?.slug as string;
 
   return (
     <div className="bg-[#ffffff] min-h-screen">
