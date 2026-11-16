@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 65" fill="none">
+  <!-- Modern architectural roofline -->
+  <path d="M 42 22 L 80 5 L 118 19" stroke="#1f1f1f" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 85 11 L 105 19" stroke="#1f1f1f" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- LADIYA Text -->
+  <text x="100" y="46" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="700" letter-spacing="2" fill="#1f1f1f">LADIYA</text>
+  <!-- INTERIOR Text -->
+  <text x="100" y="59" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="8.5" font-weight="600" letter-spacing="5" fill="#555555">INTERIOR</text>
+</svg>

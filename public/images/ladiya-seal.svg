@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <defs>
+    <!-- Circle radius 112, Center 160, 160 -->
+    <path id="sealCircle" d="M 160, 160 m -112, 0 a 112,112 0 1,1 224,0 a 112,112 0 1,1 -224,0" />
+  </defs>
+  <!-- Circular Rotating Typography matching Image 3 -->
+  <text font-family="'Cinzel', 'Playfair Display', 'Times New Roman', serif" font-size="11.5" font-weight="600" letter-spacing="4.2" fill="#1f1f1f">
+    <textPath href="#sealCircle" startOffset="0%">
+      • LADIYA • INTERIORS • LADIYA • INTERIORS • LADIYA • INTERIORS •
+    </textPath>
+  </text>
+  <!-- Slanted Isometric House Emblem in Center -->
+  <g transform="translate(160, 160) rotate(-22) translate(-26, -26)" stroke="#1f1f1f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Pitched roof -->
+    <path d="M 6 24 L 26 6 L 46 24" />
+    <!-- Overhang and body -->
+    <path d="M 10 24 V 46 H 42 V 24" />
+    <!-- Chimney on left slope -->
+    <path d="M 14 16.5 V 10 H 20 V 11.5" />
+    <!-- Window with cross grid -->
+    <rect x="24" y="26" width="12" height="12" />
+    <line x1="30" y1="26" x2="30" y2="38" stroke-width="1.5" />
+    <line x1="24" y1="32" x2="36" y2="32" stroke-width="1.5" />
+    <!-- Attic circle -->
+    <circle cx="26" cy="17" r="3" />
+  </g>
+</svg>

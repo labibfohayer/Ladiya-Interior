@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import "tailwindcss";
+
+@source "../../src";
+@source "../**";
+
+:root {
+  --font-1: 'Bricolage Grotesque', sans-serif;
+  --color-hover: #b8955a;
+  --color-hover-dark: #9e7a42;
+  --bg-primary: #ffffff;
+  --text-dark: #000000;
+  --text-muted: #777777;
+  --border-card: #e8e8e8;
+}
+
+body {
+  font-family: var(--font-1);
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Original ApolloTheme Hero Larger Headline */
+.larger-headline {
+  font-family: var(--font-1);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .larger-headline {
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+
+/* Original ApolloTheme Sub-text Metric Counters */
+.sub-text-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  font-family: var(--font-1);
+}
+
+.sub-text-item {
+  color: #b8955a;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 30px;
+  min-width: 120px;
+}
+
+.sub-text-item:first-child {
+  padding-left: 0;
+}
+
+.sub-text-item span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: normal;
+}
+
+/* 1. Spinner Rotate for Circular Seal (Original ApolloTheme Keyframes) */
+@keyframes spinnerRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinnerRotate 10s linear infinite;
+}
+
+/* 2. Text Infinity: Diagonal Shimmering Light Sweep (Original ApolloTheme Shimmer) */
+.text-infinity {
+  position: relative;
+  display: inline-block;
+  color: var(--color-hover);
+}
+
+.text-infinity::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 38%,
+    #fff3dc 50%,
+    transparent 62%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  pointer-events: none;
+  animation: arvelle-shimmer 3s linear infinite;
+}
+
+@keyframes arvelle-shimmer {
+  0% {
+    background-position: 150% 0;
+  }
+  90% {
+    background-position: -150% 0;
+  }
+  90.01%,
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+/* 3. Luxury Gold Follower Cursor (Original ApolloTheme Cursor Dot) */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(216, 173, 110, 0.85);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              opacity 0.2s ease;
+}
+
+.cursor-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #b8955a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot.is-hover {
+  width: 54px;
+  height: 54px;
+  border-color: #b8955a;
+  background-color: rgba(216, 173, 110, 0.12);
+}
+
+/* 4. Infinite Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+/* 5. Fade Up & Reveal Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 6. Floating Ambient Animation */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* 120 FPS Physics Smooth Scroll (Lenis Engine) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8955a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e7a42;
+}
