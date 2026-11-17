@@ -166,7 +166,7 @@ export default function ProductDetailPage({ slug: propSlug }: { slug?: string })
                   </div>
 
                   {/* Thumbnails */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-1 max-w-full select-none">
                     {[product.primaryImage, product.secondaryImage, '/images/ladiya-gallery/interior-08.jpg'].map((img, i) => (
                       <button
                         key={i}

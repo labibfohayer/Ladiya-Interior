@@ -88,20 +88,20 @@ export const HeroSlider: React.FC = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif-luxury text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tight text-stone-100">
+          <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-normal leading-[1.15] tracking-tight text-stone-100">
             {slide.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-stone-300 text-sm sm:text-base lg:text-lg max-w-xl font-light leading-relaxed">
+          <p className="text-stone-300 text-xs sm:text-base lg:text-lg max-w-xl font-light leading-relaxed">
             {slide.subtitle}
           </p>
 
           {/* Action Buttons */}
-          <div className="pt-4 flex flex-wrap items-center gap-4">
+          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
             <Link
               href={slide.primaryCta.href}
-              className="px-8 py-4 bg-[#D8AD6E] hover:bg-[#b8955a] text-[#22201D] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2 group"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-[#D8AD6E] hover:bg-[#b8955a] text-[#22201D] font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 group text-center"
             >
               <span>{slide.primaryCta.label}</span>
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -109,7 +109,7 @@ export const HeroSlider: React.FC = () => {
 
             <Link
               href={slide.secondaryCta.href}
-              className="px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 hover:border-white font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 backdrop-blur-sm"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 hover:border-white font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 backdrop-blur-sm text-center"
             >
               {slide.secondaryCta.label}
             </Link>
@@ -118,7 +118,7 @@ export const HeroSlider: React.FC = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute bottom-8 right-8 z-20 flex items-center gap-3">
+      <div className="absolute bottom-6 sm:bottom-8 right-4 sm:right-8 z-20 hidden sm:flex items-center gap-3">
         <button
           onClick={prevSlide}
           aria-label="Previous slide"

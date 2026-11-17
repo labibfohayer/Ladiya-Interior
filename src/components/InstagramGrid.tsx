@@ -58,18 +58,18 @@ export const InstagramGrid: React.FC = () => {
             Receive curated previews of limited-run spatial suites, private exhibition invitations, and architectural essays from our principal designers.
           </p>
 
-          <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex items-center gap-2 pt-2">
+          <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-2">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address..."
               required
-              className="flex-1 px-5 py-4 bg-white border border-[#E8E4DF] focus:border-[#D8AD6E] text-sm text-[#22201D] focus:outline-none transition-colors"
+              className="flex-1 px-5 py-3.5 sm:py-4 bg-white border border-[#E8E4DF] focus:border-[#D8AD6E] text-sm text-[#22201D] focus:outline-none transition-colors"
             />
             <button
               type="submit"
-              className="px-6 py-4 bg-[#22201D] hover:bg-[#D8AD6E] text-white hover:text-[#22201D] text-xs font-semibold tracking-widest uppercase transition-colors shrink-0 flex items-center gap-2 cursor-pointer shadow-md"
+              className="px-6 py-3.5 sm:py-4 bg-[#22201D] hover:bg-[#D8AD6E] text-white hover:text-[#22201D] text-xs font-semibold tracking-widest uppercase transition-colors shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               {subscribed ? (
                 <>

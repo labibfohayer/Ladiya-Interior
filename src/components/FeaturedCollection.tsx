@@ -30,12 +30,12 @@ export const FeaturedCollection: React.FC = () => {
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs font-semibold tracking-widest uppercase">
+          <div className="flex items-center gap-2 sm:gap-4 text-xs font-semibold tracking-widest uppercase overflow-x-auto pb-2 sm:pb-0 max-w-full shrink-0 select-none">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`pb-2 px-3 transition-all relative cursor-pointer ${
+                className={`pb-2 px-3 transition-all relative cursor-pointer whitespace-nowrap shrink-0 ${
                   activeCategory === cat
                     ? 'text-[#22201D] border-b-2 border-[#D8AD6E]'
                     : 'text-stone-400 hover:text-stone-700'

@@ -26,7 +26,7 @@ export default function HomeFourPage() {
           className="object-cover object-center opacity-90"
         />
         <div className="relative z-10 max-w-[1710px] mx-auto px-4 sm:px-8 w-full">
-          <div className="max-w-lg space-y-6 text-white bg-black/40 backdrop-blur-md p-8 sm:p-12 border border-white/20 rounded-sm">
+          <div className="max-w-lg space-y-4 sm:space-y-6 text-white bg-black/50 backdrop-blur-md p-6 sm:p-12 border border-white/20 rounded-sm">
             <span className="text-xs uppercase tracking-[0.25em] text-[#b8955a] font-semibold block">
               Interior Architecture
             </span>

@@ -30,7 +30,7 @@ export const QuickViewModal: React.FC = () => {
           onClick={closeQuickView}
         />
 
-        <div className="relative w-full max-w-4xl transform overflow-hidden rounded-sm bg-white p-6 sm:p-10 text-left shadow-2xl transition-all border border-[#E8E4DF] z-10">
+        <div className="relative w-full max-w-4xl transform overflow-hidden rounded-sm bg-white p-4 sm:p-10 text-left shadow-2xl transition-all border border-[#E8E4DF] z-10 my-4 sm:my-8">
           <button
             onClick={closeQuickView}
             className="absolute top-4 right-4 p-2 text-stone-400 hover:text-black transition-colors"

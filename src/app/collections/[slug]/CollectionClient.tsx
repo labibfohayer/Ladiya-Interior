@@ -97,14 +97,14 @@ export default function CollectionPage({ slug }: { slug?: string }) {
 
           {/* Coupon Discount Banner if activeLayout === 'coupon' */}
           {activeLayout === 'coupon' && (
-            <div className="bg-[#b8955a] text-white p-4 rounded-sm flex items-center justify-between shadow-md">
+            <div className="bg-[#b8955a] text-white p-4 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
               <div className="flex items-center gap-3">
-                <Tag size={20} />
-                <span className="font-bold text-sm">
+                <Tag size={20} className="shrink-0" />
+                <span className="font-bold text-xs sm:text-sm">
                   Exclusive Studio Privilege: Use code <span className="bg-black/20 px-2 py-0.5 rounded font-mono">LADIYA15</span> for 15% off bespoke spatial suites
                 </span>
               </div>
-              <button className="px-4 py-1.5 bg-white text-[#1f1f1f] text-xs font-bold rounded uppercase hover:bg-stone-100">
+              <button className="px-4 py-1.5 bg-white text-[#1f1f1f] text-xs font-bold rounded uppercase hover:bg-stone-100 shrink-0 self-end sm:self-auto">
                 Apply Code
               </button>
             </div>

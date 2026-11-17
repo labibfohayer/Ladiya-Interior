@@ -64,17 +64,17 @@ export const ShowcaseFooter: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1.0] }}
-            className="flex flex-wrap items-center justify-center gap-4 pt-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 w-full max-w-lg mx-auto"
           >
             <a
               href="/contact"
-              className="px-8 py-4 bg-[#b8955a] hover:bg-[#a07f46] text-white text-xs font-bold tracking-[0.2em] uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-[#b8955a] hover:bg-[#a07f46] text-white text-xs font-bold tracking-[0.2em] uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center"
             >
               Book Studio Consultation
             </a>
             <a
               href="tel:+8801580506445"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm text-xs font-bold tracking-[0.2em] uppercase rounded-full transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm text-xs font-bold tracking-[0.2em] uppercase rounded-full transition-all duration-300 text-center"
             >
               Atelier Hotline: 01580506445
             </a>

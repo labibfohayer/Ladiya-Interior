@@ -32,7 +32,7 @@ export const CartDrawer: React.FC = () => {
         onClick={closeCart}
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-4 sm:pl-10">
         <div className="w-screen max-w-md bg-[#F8F6F4] shadow-2xl flex flex-col justify-between border-l border-[#E8E4DF] animate-slideLeft">
           {/* Header */}
           <div className="p-6 bg-white border-b border-[#E8E4DF] flex items-center justify-between">

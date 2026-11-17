@@ -66,22 +66,37 @@ export const ShowcaseHeader: React.FC = () => {
 
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md border-b border-stone-200 px-6 py-4 space-y-3 font-semibold text-sm shadow-lg">
-            <Link href="#page-demo" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a]">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-b border-stone-200 px-6 py-5 space-y-3 font-semibold text-sm shadow-xl animate-fadeIn">
+            <Link href="#page-demo" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a] border-b border-stone-100">
               Home
             </Link>
-            <Link href="#detail-product" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a]">
+            <Link href="#detail-product" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a] border-b border-stone-100">
               Product
             </Link>
-            <Link href="#detail-collection" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a]">
+            <Link href="#detail-collection" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a] border-b border-stone-100">
               Collection
             </Link>
-            <Link href="#detail-featured" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a]">
+            <Link href="#detail-featured" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a] border-b border-stone-100">
               Features
             </Link>
             <Link href="#detail-menu" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-stone-800 hover:text-[#b8955a]">
               Other++
             </Link>
+            <div className="pt-3 flex flex-col gap-2">
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 text-center bg-[#b8955a] text-white text-xs font-bold tracking-widest uppercase rounded-full shadow"
+              >
+                Book Studio Consultation
+              </Link>
+              <a
+                href="tel:+8801580506445"
+                className="w-full py-2 text-center text-xs text-stone-600 hover:text-[#b8955a] font-medium"
+              >
+                Hotline: 01580506445
+              </a>
+            </div>
           </div>
         )}
       </header>

@@ -17,7 +17,7 @@ export default function HomeFivePage() {
       <Header />
 
       {/* Hero Banner: Home 5 Full Width Slider */}
-      <section className="relative w-full h-[650px] lg:h-[800px] overflow-hidden bg-stone-900 flex items-center">
+      <section className="relative w-full h-[540px] sm:h-[650px] lg:h-[800px] overflow-hidden bg-stone-900 flex items-center">
         <Image
           src="/images/ladiya-gallery/interior-05.jpg"
           alt="Home 5 Luxury Slider"
@@ -26,11 +26,11 @@ export default function HomeFivePage() {
           className="object-cover object-center"
         />
         <div className="relative z-10 max-w-[1710px] mx-auto px-4 sm:px-8 w-full">
-          <div className="max-w-xl space-y-6 text-white">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#b8955a] font-semibold block">
+          <div className="max-w-xl space-y-4 sm:space-y-6 text-white">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#b8955a] font-semibold block">
               Ladiya Interior Bespoke Edition
             </span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
               Spatial Architecture &amp; Bespoke Furnishings
             </h1>
             <p className="text-stone-300 text-sm sm:text-base font-light">
