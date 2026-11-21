@@ -1,5 +1,7 @@
 # Ladiya Interior – Luxury Architecture & Bespoke Interior Design Studio
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-ladiyainterior.pages.dev-success?style=for-the-badge&logo=cloudflare&logoColor=white)](https://ladiyainterior.pages.dev/)
+
 A production-grade, high-performance web platform for **Ladiya Interior (লাদিয়া ইন্টেরিয়র)**, built with Next.js 16, React 19, Tailwind CSS, Framer Motion, and Lenis Smooth Scroll.
 
 ---
@@ -52,7 +54,7 @@ npm install
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) for local development, or access the live production deployment at **[ladiyainterior.pages.dev](https://ladiyainterior.pages.dev/)**.
 
 ### 4. Production Build
 ```bash
